@@ -1,26 +1,26 @@
 ﻿using System;
 
-namespace GiftsForSanta
+namespace Sekonds
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            int m = int.Parse(Console.ReadLine());
-            int s = int.Parse(Console.ReadLine());
 
-            for (int i = m; i >= n; i--)
+            int first = int.Parse(Console.ReadLine());
+            int sekond = int.Parse(Console.ReadLine());
+            int third = int.Parse(Console.ReadLine());
+
+            int minutes = (first + sekond + third) / 60;
+            int sekonds = (first + sekond + third) % 60;
+
+            if (sekonds < 10)
             {
-                if (i % 2 == 0 && i % 3 == 0)
-                {
-                    if (i == s)
-                    {
-                        break;
-                    }
-                    else
-                        Console.Write($"{i} ");
-                }
+                Console.WriteLine($"{minutes}:0{sekonds}");            
+            }
+            else
+            {
+                Console.WriteLine($"{minutes}:{sekonds}");
             }
 
         }
