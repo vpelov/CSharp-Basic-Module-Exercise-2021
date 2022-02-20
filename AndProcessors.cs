@@ -6,9 +6,15 @@ namespace AndProcessors
     {
         static void Main(string[] args)
         {
-            int numberProcessors = int.Parse(Console.ReadLine());
-            int numberEmployееs = int.Parse(Console.ReadLine());
             int numberWorkDay = int.Parse(Console.ReadLine());
+
+
+            int numberProcessors = int.Parse(Console.ReadLine());
+
+            int numberEmployееs = int.Parse(Console.ReadLine());
+
+
+
 
             double timeWork = (numberWorkDay * 8 * numberEmployееs);
             double allProducedProcessors = Math.Floor(timeWork / 3);
